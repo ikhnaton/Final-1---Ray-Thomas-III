@@ -6,13 +6,8 @@
     font-size: 45px;
     transform: translate(0px, -130px);
   }
-</style>
 
-<div class="greeting">
-  Hello
-</div>
 
-<style>
   body {
     background: teal;
     display: flex;
@@ -32,39 +27,36 @@
     height: 190px;
     width: 190px;
     border-radius: 50%;
-    z-index: -1
+    z-index: -2
   }
 </style>
 
-
-<style>
-  .blink-left {
-    background-color: red;
-    color: black;
-    transform: translate(-27px, 2px);
-    visibility: hidden;
-  }
-
-  .blink-right {
-    background-color: red;
-    color: black;
-    transform: translate(27px, 2px);
-    visibility: hidden;
-  }
-</style>
-
-
-<div class="blink-left">
-  <button>eye1</button>
-</div>
-
-<div class="blink-right">
-  <button>eye2</button>
+<div class="greeting">
+  Hello
 </div>
 
 <div class="face">
-  ●⏝●
+  <span id="left-eye">●</span>
+  <span id="mouth">⏝</span>
+  <span id="right-eye">●</span>
 </div>
 
 <div class="circle">
 </div>
+
+<script>
+const lefteye = document.querySelector('#left-eye')
+const mouth = document.querySelector('#mouth')
+const righteye = document.querySelector('#right-eye')
+
+  function lefteye(){
+    lefteye.textContent= ">"
+    lefteye.style.fontSize="69px"
+    setTimeout(()=>{
+      lefteye.textContent= "●"
+      lefteye.style.fontSize="70px"
+    },1000)
+  }
+  lefteye.addEventListener('click', lefteye)
+</script>
+
