@@ -50,7 +50,7 @@ const mouth = document.querySelector('#mouth')
 const righteye = document.querySelector('#right-eye')
 
   function leye(){
-    lefteye.textContent= ">"
+    lefteye.textContent= "<"
     lefteye.style.fontSize="69px"
     setTimeout(()=>{
       lefteye.textContent= "●"
@@ -58,5 +58,25 @@ const righteye = document.querySelector('#right-eye')
     },1000)
   }
   lefteye.addEventListener('click', leye)
+  
+    function reye(){
+    righteye.textContent= "<"
+    righteye.style.fontSize="69px"
+    setTimeout(()=>{
+      righteye.textContent= "●"
+      righteye.style.fontSize="70px"
+    },1000)
+  }
+  righteye.addEventListener('click', reye)
+  
+    function mou(){
+    mouth.textContent= "_"
+    mouth.style.fontSize="69px"
+    setTimeout(()=>{
+      mouth.textContent= "⏝"
+      mouth.style.fontSize="70px"
+    },1000)
+  }
+  mouth.addEventListener('click', mou)
 </script>
 
