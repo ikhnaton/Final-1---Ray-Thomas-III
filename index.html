@@ -26,23 +26,43 @@
     font-size: 70px;
   }
 
-  .face2 {
+  .circle {
     position: fixed;
-    color: white;
     background-color: white;
-    font-size: 80px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-left: 20px;
-    padding-right: 20px;
+    height: 190px;
+    width: 190px;
     border-radius: 50%;
     z-index: -1
   }
 </style>
 
+<style>
+  .blink-left {
+    background-color: red;
+    color: black;
+    transform: translate(-27px, 2px);
+    visibility: hidden;
+  }
+
+  .blink-right {
+    background-color: red;
+    color: black;
+    transform: translate(27px, 2px);
+    visibility: hidden;
+  }
+</style>
+
+<div class="blink-left">
+  <button>eye1</button>
+</div>
+
+<div class="blink-right">
+  <button>eye2</button>
+</div>
+
 <div class="face">
   ●⏝●
 </div>
-<div class="face2">
-  ●⏝●
+
+<div class="circle">
 </div>
