@@ -7,7 +7,6 @@
     transform: translate(0px, -130px);
   }
 
-
   body {
     background: teal;
     display: flex;
@@ -21,6 +20,12 @@
     font-size: 70px;
   }
 
+  .face:hover {
+    color: teal;
+    transition: all 1s;
+    transform: rotate(10deg)
+  }
+
   .circle {
     position: fixed;
     background-color: white;
@@ -29,7 +34,7 @@
     border-radius: 50%;
     z-index: -2
   }
-  
+
   .button1 {
     position: fixed;
     color: teal;
@@ -39,11 +44,15 @@
     font-size: 30px;
     height: 50px;
     width: 250px;
-    border-radius: 25%;
-    transform: translate(0px, 130px);
+    border-radius: 10px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(0px, 150px);
   }
-  
-    .button2 {
+
+  .button2 {
     position: fixed;
     color: teal;
     text-align: center;
@@ -52,8 +61,12 @@
     font-size: 30px;
     height: 50px;
     width: 250px;
-    border-radius: 25%;
-    transform: translate(0px, 190px);
+    border-radius: 10px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(0px, 210px);
   }
 </style>
 
@@ -70,10 +83,10 @@
 <div class="circle">
 </div>
 
-<div class="button1"> Hi
+<div class="button1"> <span>Hi</span>
 </div>
 
-<div class="button2"> Bye
+<div class="button2"> <span>Bye</span>
 </div>
 
 <script>
