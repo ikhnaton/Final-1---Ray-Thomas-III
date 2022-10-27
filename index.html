@@ -71,7 +71,7 @@
 </style>
 
 <div class="greeting">
-  Hello
+  <span id="greeting">Hello</span>
 </div>
 
 <div class="face">
@@ -83,16 +83,22 @@
 <div class="circle">
 </div>
 
-<div class="button1"> <span>Hi</span>
+<div class="button1">
+  <span id="hi">Hi</span>
 </div>
 
-<div class="button2"> <span>Bye</span>
+<div class="button2">
+  <span id="bye">Bye</span>
 </div>
+
+
 
 <script>
   const lefteye = document.querySelector('#left-eye')
   const mouth = document.querySelector('#mouth')
   const righteye = document.querySelector('#right-eye')
+  const button1 = document.querySelector('#hi')
+  const button2 = document.querySelector('#bye')
 
   function leye() {
     lefteye.textContent = ">"
@@ -123,4 +129,14 @@
     }, 1000)
   }
   mouth.addEventListener('click', mou)
+  
+  
+  function hi(){
+    button1.textContent = "I'm good!"
+    button2.textContent = "Not so great..."
+    greeting.textContent = "How are you?"
+  }
+  
+  button1.addEventListener('click', hi)
+  
 </script>
