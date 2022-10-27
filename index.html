@@ -2,7 +2,7 @@
   .greeting {
     position: fixed;
     color: white;
-    font-family: "Gill Sans", sans-serif;
+    font-family: "Gill Sans";
     font-size: 45px;
     transform: translate(0px, -130px);
   }
@@ -29,6 +29,32 @@
     border-radius: 50%;
     z-index: -2
   }
+  
+  .button1 {
+    position: fixed;
+    color: teal;
+    text-align: center;
+    background-color: white;
+    font-family: "Gill Sans";
+    font-size: 30px;
+    height: 50px;
+    width: 250px;
+    border-radius: 25%;
+    transform: translate(0px, 130px);
+  }
+  
+    .button2 {
+    position: fixed;
+    color: teal;
+    text-align: center;
+    background-color: white;
+    font-family: "Gill Sans";
+    font-size: 30px;
+    height: 50px;
+    width: 250px;
+    border-radius: 25%;
+    transform: translate(0px, 190px);
+  }
 </style>
 
 <div class="greeting">
@@ -44,39 +70,44 @@
 <div class="circle">
 </div>
 
-<script>
-const lefteye = document.querySelector('#left-eye')
-const mouth = document.querySelector('#mouth')
-const righteye = document.querySelector('#right-eye')
+<div class="button1"> Hi
+</div>
 
-  function leye(){
-    lefteye.textContent= ">"
-    lefteye.style.fontSize="69px"
-    setTimeout(()=>{
-      lefteye.textContent= "●"
-      lefteye.style.fontSize="70px"
-    },1000)
+<div class="button2"> Bye
+</div>
+
+<script>
+  const lefteye = document.querySelector('#left-eye')
+  const mouth = document.querySelector('#mouth')
+  const righteye = document.querySelector('#right-eye')
+
+  function leye() {
+    lefteye.textContent = ">"
+    lefteye.style.fontSize = "69px"
+    setTimeout(() => {
+      lefteye.textContent = "●"
+      lefteye.style.fontSize = "70px"
+    }, 1000)
   }
   lefteye.addEventListener('click', leye)
-  
-    function reye(){
-    righteye.textContent= "<"
-    righteye.style.fontSize="69px"
-    setTimeout(()=>{
-      righteye.textContent= "●"
-      righteye.style.fontSize="70px"
-    },1000)
+
+  function reye() {
+    righteye.textContent = "<"
+    righteye.style.fontSize = "69px"
+    setTimeout(() => {
+      righteye.textContent = "●"
+      righteye.style.fontSize = "70px"
+    }, 1000)
   }
   righteye.addEventListener('click', reye)
-  
-    function mou(){
-    mouth.textContent= "_"
-    mouth.style.fontSize="69px"
-    setTimeout(()=>{
-      mouth.textContent= "⏝"
-      mouth.style.fontSize="70px"
-    },1000)
+
+  function mou() {
+    mouth.textContent = "_"
+    mouth.style.fontSize = "69px"
+    setTimeout(() => {
+      mouth.textContent = "⏝"
+      mouth.style.fontSize = "70px"
+    }, 1000)
   }
   mouth.addEventListener('click', mou)
 </script>
-
