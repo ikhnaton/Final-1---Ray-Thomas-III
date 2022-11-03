@@ -153,13 +153,14 @@
   righteye.addEventListener('click', reye)
 
   function UpdateMouth(m) {
+    console.log(browserInfo().name)
     mouth.textContent = m
     if (m === "⏝") {
      mouth.style.fontSize = "70px" 
     } else if (m === "_") {
      mouth.style.fontSize = "69px"
     }
-    if (m === "⏝" && browserInfo().name === "firefox") {
+    if (m === "⏝" && browserInfo().name === "Firefox") {
       mouth.style.transform = "translateY(60px)"
     } else {
       mouth.style.transform = "translateY(0px)"
@@ -191,4 +192,5 @@
   }
 
   button2.addEventListener('click', bye)
+  window.addEventListener('load',() => UpdateMouth("⏝"))
 </script>
