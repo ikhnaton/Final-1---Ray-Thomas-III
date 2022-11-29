@@ -130,6 +130,7 @@
   const righteye = document.querySelector('#right-eye')
   const button1 = document.querySelector('#hi')
   const button2 = document.querySelector('#bye')
+  const greeting = document.querySelector('#greeting')
 
   function leye() {
     lefteye.textContent = ">"
@@ -174,22 +175,25 @@
   }
   mouth.addEventListener('click', mou)
   
-  function hi() {
-    button1.textContent = "I'm good!"
-    button2.textContent = "Not so great..."
-    greeting.textContent = "How are you?"
-    UpdateMouth("⏝")
+  const lookup = [
+    //text: { resp1, resp2, greeting }
+    {key: "Hi", resp1: "I'm good!", resp2: "Not so great..", greeting: "How are you?", mouth: "⏝"},
+    {key: "Bye", resp1: "Wait come back!!", resp2: "...", greeting: "", mouth: "_"},
+  ]
+
+  const update = (text) =>
+  {
+    const current = lookup.find((el) => el.key === text)
+    if (current != null)
+    {
+      button1.textContent = current.resp1
+      button2.textContent = current.resp2
+      greeting.textContent = current.greeting
+      UpdateMouth(current.mouth)
+    }
   }
-
-  button1.addEventListener('click', hi)
-
-  function bye() {
-    button1.textContent = "Wait come back!"
-    button2.textContent = "..."
-    greeting.textContent = ""
-    UpdateMouth("_")
-  }
-
-  button2.addEventListener('click', bye)
+  button1.addEventListener('click', () => update(button1.textContent))
+	button2.addEventListener('click', () => update(button2.textContent))
+  
   window.addEventListener('load',() => UpdateMouth("⏝"))
 </script>
